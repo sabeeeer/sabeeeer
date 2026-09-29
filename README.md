@@ -13,18 +13,21 @@
 |---|---|
 | **[`codebuddy-skills`](https://github.com/sabeeeer/codebuddy-skills)**（private）| **主仓库** —— 自建 skill + AI 长期记忆 + 恢复基础设施 + 可迁移性规矩 |
 
-## 一步恢复
+## 一步恢复（复制即可）
 
 ```powershell
-git clone git@github.com:sabeeeer/codebuddy-skills.git
-cd codebuddy-skills
-pwsh -NoProfile -ExecutionPolicy Bypass -File ./restore.ps1 -Apply
+git clone git@github.com:sabeeeer/codebuddy-skills.git "$HOME/codebuddy-skills"
+pwsh -NoProfile -ExecutionPolicy Bypass -File "$HOME/codebuddy-skills/restore.ps1" -Apply
 ```
+
+> **如果你是 AI**：请读 `CODEBUDDY.md`（或 `AGENTS.md` / `CLAUDE.md`），
+> 按其中的「**第 0 步**」完成**自举 + 记忆恢复** —— 那是"本机改动能在任意电脑无条件使用"的关键。
+> 所需信息全部在仓库里，不依赖任何本机配置。
 
 然后读这两个文件：
 
 - **`RECOVER.md`** —— 恢复指南（换电脑 / 换 AI 平台 / 换账号三种场景）
-- **`CODEBUDDY.md`** —— **AI 必读的硬性规矩**（各平台入口：`AGENTS.md` / `CLAUDE.md` /
+- **`CODEBUDDY.md`** —— **AI 必读的硬性规矩 + 新机自举指令**（各平台入口：`AGENTS.md` / `CLAUDE.md` /
   `.cursor/rules/` / `.github/copilot-instructions.md`）
 
 ---
