@@ -2,8 +2,8 @@
 
 > **换电脑 / 换 AI 工具 / 换账号时，从这里开始。**
 >
-> 我的 **GitHub 账号是唯一锚点** —— 所有东西都必须做到
-> **"只凭登录 GitHub 就能无条件迁移过来使用"**，不依赖任何特定电脑、AI 平台或账号。
+> 我的 **GitHub 账号是主要锚点**。代码、知识、规则和记忆尽量放进仓库；
+> 系统软件、商业许可证、硬件驱动和明文凭据仍需新机手工/加密补齐。
 
 ---
 
@@ -21,8 +21,8 @@ pwsh -NoProfile -ExecutionPolicy Bypass -File "$HOME/codebuddy-skills/restore.ps
 ```
 
 > **如果你是 AI**：请读 `CODEBUDDY.md`（或 `AGENTS.md` / `CLAUDE.md`），
-> 按其中的「**第 0 步**」完成**自举 + 记忆恢复** —— 那是"本机改动能在任意电脑无条件使用"的关键。
-> 所需信息全部在仓库里，不依赖任何本机配置。
+> 按其中的「**第 0 步**」完成**自举 + 记忆恢复**，再按恢复文档补齐系统依赖和凭据。
+> 所需规则和脚本在仓库里；运行时、GitHub 凭据和授权软件仍需按 `RECOVER.md` 补齐。
 
 然后读这两个文件：
 
@@ -54,4 +54,5 @@ Copilot→`.github/copilot-instructions.md`、通用→当系统提示贴入）�
 | `pc-env-migration`（private）| 整机环境迁移包（Phase A→K 还原 + 验收自检）|
 | `git-autosnapshot-codebuddy` | 本地 git 快照 skill |
 | `DSP-auto-debug` | TI C2000 / DSP2833x 全自动开发调试 skill |
+| `dsp28335-algorithm`（private）| DSP28335 平台无关算法、TI 适配层与 PC 回归 |
 | `c2000ware-ref` | C2000Ware SDK 离线快照 |

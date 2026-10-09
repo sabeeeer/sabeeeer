@@ -1,0 +1,22 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Required recovery entry
+        run: |
+          test -s README.md
+          test -s RECOVER.md
+          grep -q 'codebuddy-skills' README.md
+          grep -q 'pc-env-migration' README.md
+          grep -q 'dsp28335-algorithm' README.md
