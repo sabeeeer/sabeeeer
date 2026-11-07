@@ -1,0 +1,32 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Required portability warning
+        run: |
+          test -s IRREPLACEABLE.md
+          grep -Eq 'WARNING|不可' IRREPLACEABLE.md
+      - name: Portability gate
+        shell: pwsh
+        run: |
+          pwsh -NoProfile -File tools/portability_gate.ps1 -RepoPath .
+          $rc = $LASTEXITCODE
+          if ($rc -ne 0 -and $rc -ne 2) { throw "portability gate failed with exit $rc" }
+      - name: Required recovery entry
+        run: |
+          test -s README.md
+          test -s RECOVER.md
+          grep -q 'codebuddy-skills' README.md
+          grep -q 'pc-env-migration' README.md
+          grep -q 'dsp28335-algorithm' README.md
