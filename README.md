@@ -53,5 +53,5 @@ Copilot→`.github/copilot-instructions.md`、通用→当系统提示贴入）�
 |---|---|
 | `pc-env-migration`（private）| 整机环境迁移包（Phase A→K 还原 + 验收自检）|
 | `git-autosnapshot-codebuddy` | 本地 git 快照 skill |
-| `DSP-auto-debug` | TI C2000 / DSP2833x 全自动开发调试 skill |
+| `ti-c2000-ccs-auto` | TI C2000 / DSP2833x 全自动开发调试 skill |
 | `c2000ware-ref` | C2000Ware SDK 离线快照 |
